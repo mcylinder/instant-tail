@@ -7,16 +7,16 @@ This project will help you install Meilisearch on your local computer,
 upload some indexed data of tailwind values and provide with a local Vue.js interface for instant search.  
 
 When clicking on the **class** the tailwind valuse shown will be put in to your clipboard (tested with Chrome).
+<img width="600" src="./static/InstantTail.gif"/>
 
-![](./static/InstantTail.gif)
 ## Install Meilisearch
 For this example I am using `brew` and the quick way to install is   
 ```brew update && brew install meilisearch```
 
-However, there are a few other approached to install as well as documentation on their [GitHub Page](https://github.com/meilisearch/MeiliSearch).
+However, there are a few other approaches to install as well as documentation on their [GitHub Page](https://github.com/meilisearch/MeiliSearch).
 
 ## Configure indexes
-From within the same directory as the `tailwind.json` file run the following:   
+From within the same directory as the `tailwind.json` file, run the following:   
 Create an index for tailwind.   
 ```curl -X POST 'http://127.0.0.1:7700/indexes'  --data '{"uid" : "tailcss"}'```
 
