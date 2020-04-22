@@ -23,7 +23,11 @@ Create an index for tailwind.
 Upload the data.   
 ```curl -X POST 'http://127.0.0.1:7700/indexes/tailcss/documents' --data @tailwind.json```
 
-To learn more about working with indexes visit [their documentation](https://docs.meilisearch.com/references/indexes.html#list-all-indexes).
+Select and prioritize which fields are searched.
+```curl -X POST 'http://localhost:7700/indexes/tailcss/settings/searchable-attributes' --data '["search", "type", "rule"]'```
+
+To learn more about managing indexes visit [their documentation](https://docs.meilisearch.com/references/indexes.html#list-all-indexes).  
+
 
 
 ## Build Setup
@@ -43,3 +47,7 @@ Finally visit your website at
 ```http://localhost:8080```
 
 There are options for configuring the ports used differently to prevent conflict.
+
+## Alternate Version
+There is a branch on this repository that has a ***standalone browser*** and does not need a web server. Just drag the `index.html` file in to your browser. The 
+Meilisearch service is still required to run.
