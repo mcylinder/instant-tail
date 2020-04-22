@@ -23,11 +23,7 @@ Create an index for tailwind.
 Upload the data.   
 ```curl -X POST 'http://127.0.0.1:7700/indexes/tailcss/documents' --data @tailwind.json```
 
-Select and prioritize which fields are searched.
-```curl -X POST 'http://localhost:7700/indexes/tailcss/settings/searchable-attributes' --data '["search", "type", "rule"]'```
-
-To learn more about managing indexes visit [their documentation](https://docs.meilisearch.com/references/indexes.html#list-all-indexes).  
-
+To learn more about working with indexes visit [their documentation](https://docs.meilisearch.com/references/indexes.html#list-all-indexes).
 
 
 ## Build Setup
@@ -48,6 +44,12 @@ Finally visit your website at
 
 There are options for configuring the ports used differently to prevent conflict.
 
-## Alternate Version
-There is a branch on this repository that has a ***standalone browser*** and does not need a web server. Just drag the `index.html` file in to your browser. The 
-Meilisearch service is still required to run.
+## Stand Alone Branch
+There is also a stand alone branch that does not require you to compile the Vue app. It's a stand alone `index.html`
+ file and you just drag it in to a browser. The libraries are externally hosted. You'll still need to 
+ install Meilisearch.   
+ 
+After you drag `index.html` in to your browser and the page loads you'll see some new changes.
+* If you do a search for a single space, the entire list of classes will appear.
+* You can toggle the view by pressing your shift key. This will display the field the search is based on. It will
+also darken the string in the field that matches your query.
